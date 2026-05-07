@@ -1,0 +1,5 @@
+sku,product_name,category,subcategory,supplier,supplier_id,lifecycle_stage,lead_time_days,reorder_point,base_price,base_cost
+SKU001,Widget A,Hardware,Tools,Supplier One,SUP001,mature,14,50,100,60
+SKU001,Widget A Duplicate,Hardware,Tools,Supplier Two,SUP002,mature,21,50,105,65
+SKU002,Widget B,Hardware,Tools,Supplier Two,SUP002,mature,21,50,200,120
+SKU003,Widget C,Accessories,Cables,Supplier One,SUP001,growth,10,25,300,180

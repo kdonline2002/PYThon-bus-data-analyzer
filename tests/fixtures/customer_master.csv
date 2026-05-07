@@ -1,0 +1,6 @@
+customer_id,customer_name,customer_tier,region,payment_terms,account_manager
+CUST001,Acme Ltd,Enterprise,Gauteng,Net 30,N. Dlamini
+CUST002,Beta Stores,SMB,Western Cape,COD,S. Naidoo
+CUST003,Core Retail,Mid-Market,KwaZulu-Natal,Net 15,T. Mokoena
+CUST004,Delta Wholesale,Enterprise,Gauteng,Net 45,L. van Wyk
+CUST005,Echo Traders,SMB,Eastern Cape,COD,A. Petersen

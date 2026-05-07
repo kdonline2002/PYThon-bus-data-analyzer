@@ -1,0 +1,13 @@
+SKU,Product Name,Category,Sub Category,Launch Date,Lifecycle Stage,Base Price,Base Cost,Supplier ID,Supplier,Lead Time Days,Reorder Point,Target Days Cover
+SKU001,Widget Alpha,Hardware,Fasteners,2023-05-01,mature,85,47,SUP001,Apex Industrial Supplies,14,120,35
+SKU002,Widget Beta,Hardware,Fasteners,2023-08-01,mature,95,54,SUP001,Apex Industrial Supplies,14,100,30
+SKU003,Widget Gamma,Hardware,Tools,2024-02-15,growth,220,140,SUP002,BluePeak Components,21,60,25
+SKU004,Widget Delta,Hardware,Tools,2024-07-20,growth,310,205,SUP002,BluePeak Components,21,40,20
+SKU005,Widget Echo,Accessories,Cables,2022-09-01,mature,40,18,SUP003,OmniTrade Distributors,30,200,40
+SKU006,Widget Flux,Accessories,Cables,2025-01-05,new,55,24,SUP003,OmniTrade Distributors,30,150,45
+SKU007,Widget Nova,Accessories,Batteries,2024-11-01,growth,125,73,SUP004,MetroSource Wholesale,10,70,28
+SKU008,Widget Orion,Electronics,Sensors,2023-03-10,mature,480,310,SUP005,PrimeLine Imports,45,35,18
+SKU009,Widget Pulse,Electronics,Sensors,2025-03-01,new,525,345,SUP005,PrimeLine Imports,45,30,16
+SKU010,Widget Quantum,Electronics,Controllers,2022-11-15,declining,760,510,SUP005,PrimeLine Imports,45,25,20
+SKU011,Widget Rift,Packaging,Boxes,2022-01-01,mature,18,8,SUP004,MetroSource Wholesale,10,300,50
+SKU012,Widget Spark,Packaging,Labels,2023-06-01,mature,12,4,SUP004,MetroSource Wholesale,10,400,60

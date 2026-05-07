@@ -1,0 +1,7 @@
+date,product,sku,customer_id,customer,quantity,unit_price,sales_amount,unit_cost
+2025-01-01,Widget A,SKU001,CUST001,Acme Ltd,10,100,1000,60
+2025-01-02,Widget B,SKU002,CUST002,Beta Stores,5,200,1000,120
+2025-02-01,Widget A,SKU001,CUST001,Acme Ltd,8,100,800,60
+2025-02-05,Widget C,SKU003,CUST003,Core Retail,3,300,900,180
+2025-02-06,Widget d,SKU004,CUST003,Core Retail,3,300,900,180
+2025-02-07,Widget e,SKU005,CUST003,Core Retail,3,300,900,180

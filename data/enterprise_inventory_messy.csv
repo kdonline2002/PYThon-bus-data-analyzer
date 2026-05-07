@@ -1,0 +1,49 @@
+Snapshot Date,Warehouse,Product,Product Code,Category,Sub Category,Supplier ID,Supplier,Lead Time Days,Stock,Reserved Stock,Available Stock,Qty On Order,Reorder Point,Suggested Reorder Qty,Avg Monthly Demand,Days Cover,Unit Cost,Inventory Value,Aging Bucket,Lifecycle Stage,Status Notes
+2025-12-31,Johannesburg DC,Widget Alpha,SKU001,Hardware,Fasteners,SUP001,Apex Industrial Supplies,14,1970,311,1659,889,120.0,0,1819.3,32.5,47,92590,61-90 days,mature,high priority item
+2025-12-31,Cape Town DC,Widget Alpha,SKU001,Hardware,Fasteners,SUP001,Apex Industrial Supplies,14,2273,190,2083,776,120.0,0,1819.3,37.5,47,106831,0-30 days,mature,high priority item
+2025/12/31,Durban Hub,Widget Alpha,SKU001,Hardware,Fasteners,SUP001,Apex Industrial Supplies,14,4336,371,1978,1164,120.0,0,1819.3,38.7,47,110403,31-60 days,mature,possible overstock
+31/12/2025,Pretoria Hub,Widget Alpha,SKU001,Hardware,Fasteners,SUP001,Apex Industrial Supplies,14,1986,235,1751,1202,120.0,0,1819.3,32.7,47,"R93,342.00",0-30 days,mature,
+2025-12-31,Johannesburg DC,Widget Beta,SKU002,Hardware,Fasteners,SUP001,Apex Industrial Supplies,14,1911,90,1821,644,100.0,0,2178.0,26.3,54,103194,31-60 days,mature,
+31/12/2025,Cape Town DC,Widget Beta,SKU002,Hardware,Fasteners,SUP001,Apex Industrial Supplies,14,2133,141,1992,1554,100.0,0,2178.0,29.4,54,115182,0-30 days,mature,high priority item
+31/12/2025,Durban Hub,Widget Beta,SKU002,Hardware,Fasteners,SUP001,Apex Industrial Supplies,14,1819,256,1563,727,100.0,0,2178.0,25.1,54,98226,90+ days,mature,slow moving
+2025-12-31,Pretoria Hub,Widget Beta,SKU002,Hardware,Fasteners,SUP001,Apex Industrial Supplies,14,2693,168,2525,748,100.0,0,2178.0,37.1,54,145422,31-60 days,mature,high priority item
+31/12/2025,Johannesburg DC,Widget Gamma,SKU003,Hardware,Tools,SUP002,BluePeak Components,21,1766,181,1585,1238,60.0,0,1851.0,28.6,140,"R247,240.00",61-90 days,growth,slow moving
+2025/12/31,Cape Town DC,Widget Gamma,SKU003,Hardware,Tools,SUP002,BluePeak Components,21,1339,80,1259,1055,60.0,0,1851.0,21.7,140,187460,0-30 days,growth,cycle count pending
+2025/12/31,Durban Hub,Widget Gamma,SKU003,Hardware,Tools,SUP002,BluePeak Components,21,1413,178,1235,914,60.0,0,1851.0,22.9,140,197820,0-30 days,growth,slow moving
+2025-12-31,Pretoria Hub,Widget Gamma,SKU003,Hardware,Tools,SUP002,BluePeak Components,21,4747,46,1798,399,60.0,0,1851.0,29.9,140,258160,31-60 days,growth,possible overstock
+2025/12/31,Johannesburg DC,Widget Delta,SKU004,Hardware,Tools,SUP002,BluePeak Components,21,3934,93,1251,234,40.0,0,1802.0,22.4,205,275520,0-30 days,growth,possible overstock
+2025-12-31,Cape Town DC,Widget Delta,SKU004,Hardware,Tools,SUP002,BluePeak Components,21,1459,88,1371,328,40.0,0,1802.0,24.3,205,299095,0-30 days,growth,high priority item
+2025-12-31,Durban Hub,Widget Delta,SKU004,Hardware,Tools,SUP002,BluePeak Components,21,1553,239,1314,599,40.0,0,1802.0,25.9,205,318365,31-60 days,growth,slow moving
+2025-12-31,Pretoria Hub,Widget Delta,SKU004,Hardware,Tools,SUP002,BluePeak Components,21,-1159,142,1017,722,40.0,0,1802.0,19.3,205,237595,0-30 days,growth,
+2025-12-31,Johannesburg DC,Widget Echo,SKU005,Accessories,Cables,SUP003,OmniTrade Distributors,30,4531,308,4223,839,200.0,0,2951.0,46.1,R18.00,81558,61-90 days,mature,
+2025-12-31,Cape Town DC,Widget Echo,SKU005,Accessories,Cables,SUP003,OmniTrade Distributors,30,4283,638,3645,2242,200.0,0,2951.0,43.5,R18.00,77094,31-60 days,mature,slow moving
+2025/12/31,Durban Hub,Widget Echo,SKU005,Accessories,Cables,SUP003,OmniTrade Distributors,30,3951,86,3865,1310,200.0,0,2951.0,40.2,18,"$71,118.00",90+ days,mature,high priority item
+31/12/2025,Pretoria Hub,Widget Echo,SKU005,Accessories,Cables,SUP003,OmniTrade Distributors,30,4286,202,4084,2287,200.0,0,2951.0,43.6,18,77148,0-30 days,mature,
+2025/12/31,Johannesburg DC,Widget Flux,SKU006,Accessories,Cables,SUP003,OmniTrade Distributors,30,5153,270,4883,653,150.0,0,3301.3,46.8,24,"R123,672.00",0-30 days,new,high priority item
+2025/12/31,Cape Town DC,Widget Flux,SKU006,Accessories,Cables,SUP003,OmniTrade Distributors,30,6673,1122,5551,754,,0,3301.3,60.6,24,160152,31-60 days,new,
+2025-12-31,Durban Hub,Widget Flux,SKU006,Accessories,Cables,SUP003,OmniTrade Distributors,30,5932,382,5550,958,150.0,0,3301.3,53.9,24,142368,90+ days,new,slow moving
+2025/12/31,Pretoria Hub,Widget Flux,SKU006,Accessories,Cables,SUP003,OmniTrade Distributors,30,978,461,3857,1681,150.0,0,3301.3,39.2,24,103632,0-30 days,new,possible stockout risk
+31/12/2025,Johannesburg DC,Widget Nova,SKU007,Accessories,Batteries,SUP004,MetroSource Wholesale,10,2761,69,2692,555,70.0,0,2806.7,29.5,73,201553,0-30 days,growth,slow moving
+2025/12/31,Cape Town DC,Widget Nova,SKU007,Accessories,Batteries,SUP004,MetroSource Wholesale,10,3394,587,2807,1682,70.0,0,2806.7,36.3,73,247762,90+ days,growth,
+31/12/2025,Durban Hub,Widget Nova,SKU007,Accessories,Batteries,SUP004,MetroSource Wholesale,10,3105,486,2619,380,70.0,0,2806.7,33.2,73,226665,0-30 days,growth,cycle count pending
+2025/12/31,Pretoria Hub,Widget Nova,SKU007,Accessories,Batteries,SUP004,MetroSource Wholesale,10,40,63,2895,758,70.0,0,2806.7,31.6,73,215934,31-60 days,growth,possible stockout risk
+2025/12/31,Johannesburg DC,Widget Orion,SKU008,Electronics,Sensors,SUP005,PrimeLine Imports,45,88,34,352,317,35.0,0,702.3,16.5,310,119660,0-30 days,mature,possible stockout risk
+2025-12-31,Cape Town DC,Widget Orion,SKU008,Electronics,Sensors,SUP005,PrimeLine Imports,45,367,47,320,235,35.0,0,702.3,15.7,310,,31-60 days,mature,high priority item
+2025/12/31,Durban Hub,Widget Orion,SKU008,Electronics,Sensors,SUP005,PrimeLine Imports,45,571,57,514,505,35.0,0,702.3,24.4,310,177010,90+ days,mature,high priority item
+2025-12-31,Pretoria Hub,Widget Orion,SKU008,Electronics,Sensors,SUP005,PrimeLine Imports,45,438,21,417,431,35.0,0,702.3,18.7,310,135780,90+ days,mature,high priority item
+2025/12/31,Johannesburg DC,Widget Pulse,SKU009,Electronics,Sensors,SUP005,PrimeLine Imports,45,520,88,432,451,30.0,0,878.3,17.8,345,179400,61-90 days,new,
+2025/12/31,Cape Town DC,Widget Pulse,SKU009,Electronics,Sensors,SUP005,PrimeLine Imports,45,388,31,357,596,30.0,0,878.3,13.3,345,133860,61-90 days,new,high priority item
+2025-12-31,Durban Hub,Widget Pulse,SKU009,Electronics,Sensors,SUP005,PrimeLine Imports,45,1145,67,518,315,30.0,0,878.3,20.0,345,201825,31-60 days,new,possible overstock
+31/12/2025,Pretoria Hub,Widget Pulse,SKU009,Electronics,Sensors,SUP005,PrimeLine Imports,45,336,56,280,309,30.0,0,878.3,11.5,345,115920,61-90 days,new,high priority item
+2025/12/31,Johannesburg DC,Widget Quantum,SKU010,Electronics,Controllers,SUP005,PrimeLine Imports,45,644,104,540,520,25.0,0,709.7,27.2,510.00,328440,61-90 days,declining,
+31/12/2025,Cape Town DC,Widget Quantum,SKU010,Electronics,Controllers,SUP005,PrimeLine Imports,45,1078,53,398,373,25.0,0,709.7,19.1,510,230010,31-60 days,declining,possible overstock
+31/12/2025,Durban Hub,Widget Quantum,SKU010,Electronics,Controllers,SUP005,PrimeLine Imports,45,450,77,373,318,25.0,0,709.7,19.0,510,229500,0-30 days,declining,slow moving
+2025-12-31,Pretoria Hub,Widget Quantum,SKU010,Electronics,Controllers,SUP005,PrimeLine Imports,45,568,86,482,466,25.0,0,709.7,24.0,$510.00,289680,31-60 days,declining,cycle count pending
+2025-12-31,Johannesburg DC,Widget Rift,SKU011,Packaging,Boxes,SUP004,MetroSource Wholesale,10,11117,1328,9789,4103,300.0,0,5822.0,57.3,8,88936,61-90 days,mature,cycle count pending
+2025/12/31,Cape Town DC,Widget Rift,SKU011,Packaging,Boxes,SUP004,MetroSource Wholesale,10,11579,1139,10440,2790,300.0,0,5822.0,59.7,8,92632,31-60 days,mature,slow moving
+2025/12/31,Durban Hub,Widget Rift,SKU011,Packaging,Boxes,SUP004,MetroSource Wholesale,10,11490,1754,9736,1255,,0,5822.0,59.2,8,91920,90+ days,mature,slow moving
+31/12/2025,Pretoria Hub,Widget Rift,SKU011,Packaging,Boxes,SUP004,MetroSource Wholesale,10,9378,277,9101,1887,300.0,0,5822.0,48.3,8,75024,31-60 days,mature,slow moving
+31/12/2025,Johannesburg DC,Widget Spark,SKU012,Packaging,Labels,SUP004,MetroSource Wholesale,10,9513,1676,7837,2493,400.0,0,4761.7,59.9,4,38052,0-30 days,mature,high priority item
+31/12/2025,Cape Town DC,Widget Spark,SKU012,Packaging,Labels,SUP004,MetroSource Wholesale,10,6698,354,6344,2372,,0,4761.7,42.2,4,26792,31-60 days,mature,
+31/12/2025,Durban Hub,Widget Spark,SKU012,Packaging,Labels,SUP004,MetroSource Wholesale,10,11078,747,10331,3777,400.0,0,4761.7,69.8,4,44312,0-30 days,mature,slow moving
+2025-12-31,Pretoria Hub,Widget Spark,SKU012,Packaging,Labels,SUP004,MetroSource Wholesale,10,10912,1313,9599,2363,400.0,0,4761.7,68.7,R4.00,43648,0-30 days,mature,

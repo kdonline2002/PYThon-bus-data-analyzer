@@ -1,0 +1,13 @@
+Order Date,Product Name,SKU,Customer,Region,Qty,Unit Price,Sales Amt,Notes
+2024/01/05,Widget A,SKU001,John Smith,West,10,15.5,155,first order
+05-01-2024,Widget A,SKU001,John Smith,West,10,$15.50,155,
+2024-01-06,Widget B,SKU002,Mary Jones,East,5,20,100,
+2024-01-07,Widget C,SKU003,Acme Corp,North,3,30,90,urgent
+2024-01-07,Widget C,SKU003,Acme Corp,North,3,30,90,duplicate
+2024-01-08,Widget D,SKU004,,South,7,25,175,missing customer
+2024-01-09,Widget E,SKU005,Global Ltd,West,0,50,0,zero sale
+2024-01-10,Widget F,SKU006,Jane Doe,East,-2,40,-80,negative qty
+,Widget G,SKU007,Unknown,West,4,35,140,missing date
+2024-02-01,Widget A,SKU001,John Smith,West,12,15.5,186,
+2024-02-02,Widget B,SKU002,Mary Jones,East,6,20,120,
+2024-02-03,Widget X,SKU999,New Customer,North,2,100,200,new product

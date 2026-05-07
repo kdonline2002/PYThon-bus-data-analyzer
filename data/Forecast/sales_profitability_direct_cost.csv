@@ -1,0 +1,6 @@
+Order Date,Product Name,SKU Code,Client Name,Client ID,Qty Sold,Selling Price,Unit Cost
+2025-01-05,Widget A,WA-001,Acme,C001,10,100,60
+2025-01-12,Widget B,WB-001,Beta,C002,5,200,150
+2025-02-03,Widget A,WA-001,Acme,C001,8,100,60
+2025-02-15,Widget C,WC-001,Gamma,C003,3,50,80
+2025-03-01,Widget B,WB-001,Beta,C002,7,200,150

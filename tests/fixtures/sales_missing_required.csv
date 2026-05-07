@@ -1,0 +1,3 @@
+date,product,sku,customer_id,unit_price,sales_amount
+2025-01-01,Widget A,SKU001,CUST001,100,1000
+2025-01-02,Widget B,SKU002,CUST002,200,1000

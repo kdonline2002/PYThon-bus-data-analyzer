@@ -1,0 +1,4 @@
+date,product,sku,customer,quantity,unit_price,unit_cost
+2025-01-01,Loss Leader,LL-001,Acme,10,5,9
+2025-01-02,Free Sample,FS-001,Beta,3,0,2
+2025-01-03,Good Item,GI-001,Gamma,4,50,20

@@ -1,0 +1,4 @@
+Invoice Date,Item,Product Code,Customer,Customer ID,Units,Revenue
+2025-01-07,Widget A,WA-001,Acme,C001,12,1200
+2025-01-18,Widget B,WB-001,Beta,C002,4,800
+2025-02-08,Widget C,WC-001,Gamma,C003,2,100

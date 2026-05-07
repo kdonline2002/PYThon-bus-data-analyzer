@@ -1,0 +1,7 @@
+Product Name,Product Code,Category,Stock,Reorder Point,Cost Price,Supplier
+Widget A,SKU001,Hardware,100,50,R60.00,Supplier One
+Widget B,SKU002,Hardware,20,50,R120.00,Supplier Two
+Widget C,SKU003,Accessories,0,25,R80.00,Supplier One
+Widget D,SKU004,Accessories,-5,30,R90.00,Supplier Three
+Widget E,SKU005,Electronics,300,40,R140.00,Supplier Two
+Widget F,SKU006,Electronics,15,,R75.00,Supplier Four

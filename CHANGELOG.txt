@@ -1,0 +1,15 @@
+Version 1.0
+----------------------------------------
+
+Initial review release
+
+Features:
+- Sales analysis
+- Inventory analysis
+- Profitability analysis
+- Customer/product enrichment
+- Validation reports
+- Join diagnostics
+- Mapping profiles
+- Demo datasets
+- Excel export

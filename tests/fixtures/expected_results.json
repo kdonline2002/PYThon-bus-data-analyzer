@@ -1,0 +1,15 @@
+{
+  "sales_clean": {
+    "dataset_type": "sales",
+    "total_sales": 37700,
+    "units_sold": 26,
+    "preflight": "GREEN"
+  },
+  "sales_missing_required": {
+    "preflight": "RED",
+    "expected_errors": ["missing_required_field"]
+  },
+  "product_master_duplicates": {
+    "expected_join_warning": true
+  }
+}

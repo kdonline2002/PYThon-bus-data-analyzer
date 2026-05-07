@@ -1,0 +1,11 @@
+Product,Product Code,Category,Stock,Reorder Point,Cost Price,Supplier,Notes
+Widget A,SKU001,Hardware,120,50,10,Supplier X,
+Widget B,SKU002,Hardware,40,50,12,Supplier Y,low stock
+Widget C,SKU003,Hardware,0,30,20,Supplier X,out of stock
+Widget D,SKU004,Hardware,300,80,15,Supplier Z,overstock
+Widget E,SKU005,Accessories,10,20,5,Supplier Y,low stock
+Widget F,SKU006,Accessories,-5,15,8,Supplier X,negative stock
+Widget G,SKU007,Accessories,60,30,6,Supplier Z,
+Widget H,SKU008,Accessories,200,40,7,Supplier Z,overstock
+Widget I,SKU009,Hardware,,25,9,Supplier X,missing stock
+Widget J,SKU010,Hardware,15,,11,Supplier Y,missing reorder
