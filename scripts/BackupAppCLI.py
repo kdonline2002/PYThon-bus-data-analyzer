@@ -54,7 +54,6 @@ def main():
     source_folder = Path.home() / "PYThon bus-data-analyzer"
     backup_location = Path.home() / "PYThon bus-data-analyzer_backups"
     # backup_location = Path.home() / "OneDrive/Desktop/CAR"
-    # C:\Users\Kerrigan\OneDrive\Desktop\CAR
     backup_location.mkdir(exist_ok=True, parents=True)
     # Option 1: Hardcoded description
     # backup_folder(source_folder, backup_location, keep=5, description="added-new-feature")
