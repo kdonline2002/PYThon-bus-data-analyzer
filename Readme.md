@@ -151,9 +151,9 @@ Includes:
 
 ---
 
-<!-- ## Distribution Build
+## Distribution Build
 
-Portable desktop launcher available in:
+Portable desktop Zip with launcher available in:
 
 ```text
 /distribution/
@@ -163,7 +163,7 @@ Run:
 
 ```text
 run_app.bat
-``` -->
+```
 
 ---
 
