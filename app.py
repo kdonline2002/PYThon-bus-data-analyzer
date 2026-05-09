@@ -246,61 +246,182 @@ def main() -> None:
         #     "Optional: customer master + product master"
         # )
 
-    # 1 st.subheader("File Uploads")
+
+    # ---------------------------------------------------
+    # Upload State
+    # ---------------------------------------------------
+
+    if "uploader_version" not in st.session_state:
+        st.session_state["uploader_version"] = 0
+
+    if "demo_choice" not in st.session_state:
+        st.session_state["demo_choice"] = "None"
+
+
+    # ---------------------------------------------------
+    # File Uploads
+    # ---------------------------------------------------
+
     st.subheader("📂 Upload Your Data")
-    st.caption("Start with your main dataset. You can optionally enrich it with master data.")
-    
+    st.caption(
+        "Start with your main dataset. "
+        "You can optionally enrich it with customer and product master data."
+    )
+
     col1, col2 = st.columns([2, 1])
 
+    # ---------------------------------------------------
+    # Main Upload
+    # ---------------------------------------------------
+
     with col1:
+
         main_file = st.file_uploader(
             "Main dataset (sales, inventory, or general)",
             type=["csv", "xlsx", "xls"],
-            key="main_file",
+            key=f"main_file_{st.session_state['uploader_version']}",
         )
-        if main_file and st.session_state.get("demo_choice", "None") != "None":
+
+        # User uploaded real file while demo active
+        if main_file and st.session_state["demo_choice"] != "None":
             st.session_state["demo_choice"] = "None"
             st.info("Switched from demo mode to uploaded file.")
+            st.rerun()
+
+
+    # ---------------------------------------------------
+    # Demo Selector
+    # ---------------------------------------------------
 
     with col2:
+
         demo_choice = st.selectbox(
             "🚀 Try Demo Data",
             ["None", "Sales", "Inventory", "Full (Sales + Masters)"],
+            index=[
+                "None",
+                "Sales",
+                "Inventory",
+                "Full (Sales + Masters)",
+            ].index(st.session_state["demo_choice"]),
         )
 
         if st.button("Load Demo"):
+
             st.session_state["demo_choice"] = demo_choice
 
-        if st.session_state.get("demo_choice", "None") != "None":
+            # Reset upload widgets
+            st.session_state["uploader_version"] += 1
+
+            st.success(f"{demo_choice} demo loaded.")
+            st.rerun()
+
+        if st.session_state["demo_choice"] != "None":
+
+            st.info(f"Demo mode active: {st.session_state['demo_choice']}")
+
             if st.button("❌ Exit Demo Mode"):
+
                 st.session_state["demo_choice"] = "None"
-                st.session_state["use_demo_data"] = False
+
+                # Reset upload widgets
+                st.session_state["uploader_version"] += 1
+
+                st.success("Exited demo mode.")
                 st.rerun()
 
 
-    # main_file = st.file_uploader(
-    #     "Main dataset (sales, inventory, or general)",
-    #     type=["csv", "xlsx", "xls"],
-    #     key="main_file",
-    # )
+    # ---------------------------------------------------
+    # Optional Master Files
+    # ---------------------------------------------------
+
     customer_file = st.file_uploader(
         "Optional customer master",
         type=["csv", "xlsx", "xls"],
-        key="customer_file",
+        key=f"customer_file_{st.session_state['uploader_version']}",
     )
+
     product_file = st.file_uploader(
         "Optional product master",
         type=["csv", "xlsx", "xls"],
-        key="product_file",
+        key=f"product_file_{st.session_state['uploader_version']}",
     )
 
-    demo_choice = st.session_state.get("demo_choice", "None")
 
+    # ---------------------------------------------------
+    # Demo Mode
+    # ---------------------------------------------------
+
+    demo_choice = st.session_state.get("demo_choice", "None")
     use_demo = demo_choice != "None"
+
+
+    # ---------------------------------------------------
+    # Empty State
+    # ---------------------------------------------------
 
     if not main_file and not use_demo:
         st.info("Upload a dataset or try demo data to begin.")
         return
+
+
+
+
+    # # 1 st.subheader("File Uploads")
+    # st.subheader("📂 Upload Your Data")
+    # st.caption("Start with your main dataset. You can optionally enrich it with master data.")
+    
+    # col1, col2 = st.columns([2, 1])
+
+    # with col1:
+    #     main_file = st.file_uploader(
+    #         "Main dataset (sales, inventory, or general)",
+    #         type=["csv", "xlsx", "xls"],
+    #         key="main_file",
+    #     )
+    #     if main_file and st.session_state.get("demo_choice", "None") != "None":
+    #         st.session_state["demo_choice"] = "None"
+    #         st.info("Switched from demo mode to uploaded file.")
+
+    # with col2:
+    #     demo_choice = st.selectbox(
+    #         "🚀 Try Demo Data",
+    #         ["None", "Sales", "Inventory", "Full (Sales + Masters)"],
+    #     )
+
+    #     if st.button("Load Demo"):
+    #         st.session_state["demo_choice"] = demo_choice
+
+    #     if st.session_state.get("demo_choice", "None") != "None":
+    #         if st.button("❌ Exit Demo Mode"):
+    #             st.session_state["demo_choice"] = "None"
+    #             st.session_state["use_demo_data"] = False
+    #             st.rerun()
+
+
+    # # main_file = st.file_uploader(
+    # #     "Main dataset (sales, inventory, or general)",
+    # #     type=["csv", "xlsx", "xls"],
+    # #     key="main_file",
+    # # )
+    # customer_file = st.file_uploader(
+    #     "Optional customer master",
+    #     type=["csv", "xlsx", "xls"],
+    #     key="customer_file",
+    # )
+    # product_file = st.file_uploader(
+    #     "Optional product master",
+    #     type=["csv", "xlsx", "xls"],
+    #     key="product_file",
+    # )
+
+    # demo_choice = st.session_state.get("demo_choice", "None")
+
+    # use_demo = demo_choice != "None"
+
+    # if not main_file and not use_demo:
+    #     st.info("Upload a dataset or try demo data to begin.")
+    #     return
 
     main_sheet = choose_sheet(main_file, "main dataset")
     customer_sheet = choose_sheet(customer_file, "customer master") if customer_file else None
