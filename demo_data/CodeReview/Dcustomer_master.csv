@@ -1,0 +1,4 @@
+Customer ID,Customer Name,Customer Tier,Region,Payment Terms,Account Manager
+C001,Acme,Gold,North,30 days,Alice
+C002,Beta,Silver,South,15 days,Bob
+C003,Gamma,Bronze,West,Cash,Charlie

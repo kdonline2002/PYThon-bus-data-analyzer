@@ -4,9 +4,10 @@ from dataclasses import dataclass
 from typing import Optional
 
 import pandas as pd
+import streamlit as st
 
 from analytics.inventory_analysis import analyze_inventory
-from analytics.sales_analysis import analyze_sales
+from analytics.sales_analysis import analyze_sales_cached
 from data_cleaning.cleaner import SpreadsheetCleaner, infer_dataset_type
 from data_cleaning.validators_v2 import validate_dataset
 from utils.column_mapping import apply_mapping_to_cleaned_df
@@ -25,6 +26,11 @@ class PipelineOutput:
     analysis_result: AnalysisResult
 
 
+@st.cache_data(show_spinner=False)
+def cached_clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    return SpreadsheetCleaner(df).clean()
+
+
 class PipelineService:
     def prepare_dataset(
         self,
@@ -34,7 +40,8 @@ class PipelineService:
         dataset_type: Optional[str] = None,
         mapping: Optional[dict[str, str]] = None,
     ) -> DatasetBundle:
-        cleaned = SpreadsheetCleaner(raw_df).clean()
+        # cleaned = SpreadsheetCleaner(raw_df).clean()
+        cleaned = cached_clean_dataframe(raw_df)
         mapped = apply_mapping_to_cleaned_df(cleaned, mapping or {})
         resolved_type = dataset_type or infer_dataset_type(mapped)
         report = validate_dataset(mapped, resolved_type, dataset_name=dataset_name)
@@ -106,7 +113,7 @@ class PipelineService:
                 customer_bundle.mapped if customer_bundle else None,
                 product_bundle.mapped if product_bundle else None,
             )
-            analysis_result = analyze_sales(enriched_df)
+            analysis_result = analyze_sales_cached(enriched_df)
 
         elif dataset_type == "inventory":
             enriched_df, join_reports = enrich_inventory_with_product_master(

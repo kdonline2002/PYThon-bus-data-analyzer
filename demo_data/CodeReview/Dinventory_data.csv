@@ -1,0 +1,5 @@
+Product Name,SKU Code,Category,Supplier,Supplier ID,Stock On Hand,Reorder Level,Cost
+Widget A,WA-001,Hardware,Supplier X,S001,120,50,40
+Widget B,WB-001,Hardware,Supplier Y,S002,30,40,150
+Widget C,WC-001,Accessories,Supplier Z,S003,5,20,80
+Widget D,WD-001,Accessories,Supplier Z,S003,0,15,60

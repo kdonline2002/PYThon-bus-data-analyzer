@@ -1,9 +1,10 @@
 from __future__ import annotations
-
+import io
 import re
 from typing import Optional
 
 import pandas as pd
+import streamlit as st
 
 MISSING_VALUES = {
     "",
@@ -162,6 +163,25 @@ def load_uploaded_file(uploaded_file, sheet_name: Optional[str] = None) -> pd.Da
     if file_name.endswith((".xlsx", ".xls")):
         return pd.read_excel(uploaded_file, sheet_name=sheet_name or 0)
     raise ValueError("Unsupported file type. Please upload CSV or Excel.")
+
+#  1 ***
+@st.cache_data(show_spinner=False)
+def load_uploaded_file_cached(
+    file_bytes: bytes,
+    file_name: str,
+    sheet_name: Optional[str] = None,
+) -> pd.DataFrame:
+
+    file_obj = io.BytesIO(file_bytes)
+
+    if file_name.endswith(".csv"):
+        return pd.read_csv(file_obj)
+
+    if file_name.endswith((".xlsx", ".xls")):
+        return pd.read_excel(file_obj, sheet_name=sheet_name or 0)
+
+    raise ValueError("Unsupported file type.")
+
 
 
 def get_excel_sheet_names(uploaded_file) -> list[str]:

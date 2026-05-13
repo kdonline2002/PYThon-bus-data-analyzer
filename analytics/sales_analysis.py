@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 import pandas as pd
+import streamlit as st
 
 from data_cleaning.validators_v2 import validate_dataset
 from utils.models import AnalysisResult
-
 
 def _clean_currency_series(series: pd.Series) -> pd.Series:
     return (
@@ -193,8 +193,8 @@ def build_profitability_segments(work: pd.DataFrame) -> dict[str, pd.DataFrame]:
         "bottom_customers_by_gross_profit": customer_segments.sort_values("gross_profit", ascending=True).head(10).reset_index(drop=True) if not customer_segments.empty else pd.DataFrame(),
     }
 
-
-def analyze_sales(df: pd.DataFrame) -> AnalysisResult:
+@st.cache_data(show_spinner=False)
+def analyze_sales_cached(df: pd.DataFrame) -> AnalysisResult:
     work = ensure_sales_amount(df)
     work, profitability_notes = add_profitability_metrics(work)
 

@@ -19,6 +19,9 @@ from utils.demo_data import (
     get_demo_product_master,
 )
 
+from data_cleaning.cleaner import load_uploaded_file_cached
+from reporting.report_cache import build_excel_report_cached
+
 st.set_page_config(page_title="Business Data Analyzer", layout="wide")
 
 with st.expander("ℹ️ How to use this tool", expanded=False):
@@ -453,7 +456,13 @@ def main() -> None:
 
     else:
         try:
-            raw_df = load_uploaded_file(main_file, sheet_name=main_sheet)
+            if main_file:
+                # raw_df = load_uploaded_file(main_file, sheet_name=main_sheet)
+                raw_df = load_uploaded_file_cached(
+                    main_file.getvalue(),
+                    main_file.name,
+                    main_sheet,
+                )
         except Exception as exc:
             st.error(f"Could not load the main dataset: {exc}")
             return
@@ -463,14 +472,24 @@ def main() -> None:
 
     if customer_file:
         try:
-            customer_raw_df = load_uploaded_file(customer_file, sheet_name=customer_sheet)
+            # customer_raw_df = load_uploaded_file(customer_file, sheet_name=customer_sheet)
+            customer_raw_df = load_uploaded_file_cached(
+                    customer_file.getvalue(),
+                    customer_file.name,
+                    main_sheet,
+                )
         except Exception as exc:
             st.error(f"Could not load the customer master: {exc}")
             return
 
     if product_file:
         try:
-            product_raw_df = load_uploaded_file(product_file, sheet_name=product_sheet)
+            # product_raw_df = load_uploaded_file(product_file, sheet_name=product_sheet)
+            product_raw_df = load_uploaded_file_cached(
+                    product_file.getvalue(),
+                    product_file.name,
+                    main_sheet,
+                )
         except Exception as exc:
             st.error(f"Could not load the product master: {exc}")
             return
@@ -716,7 +735,7 @@ def main() -> None:
             col.metric(label, value)
 
     st.subheader("Data Preview")
-    tab1, tab2, tab3 = st.tabs(["Raw Main Data", "Cleaned Main Data", "Enriched/Analyzed Data"])
+    tab1, tab2, tab3 = st.tabs(["Raw Main Data", "Cleaned Main Data", "Final Analysis Dataset"])
     with tab1:
         st.dataframe(raw_df.head(preview_rows), width="stretch")
     with tab2:
@@ -861,7 +880,8 @@ def main() -> None:
     if is_blocked:
         st.info("Report export is disabled because the preflight checks found blocking issues.")
     else:
-        excel_bytes = build_excel_report(result)
+        # excel_bytes = build_excel_report(result)
+        excel_bytes = build_excel_report_cached(result)
         st.download_button(
             label="Download Excel Report",
             data=excel_bytes,
