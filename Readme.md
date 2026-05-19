@@ -80,7 +80,7 @@ Built with:
 ### Validation Report
 ![VALIDATION](docs/screenshots/VALIDATIONREPORT.png)
 ### Insights & Trends
-![Insights](docs/screenshots/insightsandtrends.png)
+![Insights](docs/screenshots/INSIGHTSANDTRENDS.png)
 ### Recommendations & Export Results
 ![Recommend](docs/screenshots/RECOMMENDATIONSANDEXPORT.png)
 ### Excel Export
