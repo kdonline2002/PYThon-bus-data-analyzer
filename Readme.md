@@ -69,9 +69,9 @@ Built with:
 ---
 
 ## Screenshots
-### Dashboard Overview 2
+### Dashboard Overview
 ![DashboardBlank](docs/screenshots/dashboard2.png)
-### Column Mapping 3
+### Column Mapping
 ![Mapping1](docs/screenshots/MappingSales.png)
 ### Run Summary
 ![Run](docs/screenshots/RUNSUMMARY.png)
